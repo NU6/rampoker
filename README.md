@@ -1,0 +1,2 @@
+# rampoker
+rampok semua
