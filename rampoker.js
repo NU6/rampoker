@@ -13,7 +13,7 @@ javascript: (function (start01,end01){
 		length01 : 1,
 		start01: start01,
 		end01 : end01,
-		id : 0
+		id : 1
 	};
 	function l(u, i) {
 		var d = document;
@@ -48,8 +48,7 @@ switch (id){
 		var urls_to_download = elements
 						.map(x=>x.getAttribute("href"));
 		var file_names = 	elements
-						.map(x=>x.getAttribute("title")
-						.match(/\w+(?=\/0$)/)[0]);
+						.map(x=>x.getAttribute("title"));
 }
 
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
