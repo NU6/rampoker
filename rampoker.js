@@ -2,9 +2,9 @@
 /*
 
 Rampoker By Rram79
-version 0.1.1 (Beta)
+version 0.1.2 (Beta)
 
-Paste code bellow to taskbar
+Paste code bellow to addressbar
 ===================================================================
 javascript: (function (start01,end01){
 	window.param = {	
@@ -26,6 +26,16 @@ javascript: (function (start01,end01){
 	} l('https://gitcdn.link/cdn/NU6/rampoker/main/rampoker.js', 'rampoker')
 })();
 ===================================================================
+
+Usage : 
+-paste the highlighted code into addressbar.
+
+Options : 
+-Change the value of id to target specified websites.
+-You can add parameters to function calls at line 27 for paging mode. examples :
+	- ()	:download all items
+	- (7)	:download item 7th to end
+	- (7,30):download item 7th to 30th
 */
 var {proxy01, task01, length01, start01, end01, id} = window.param;
 switch (id){
