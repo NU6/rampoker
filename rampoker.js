@@ -56,8 +56,26 @@ switch (id){
 					];
 		var urls_to_download = elements
 						.map(x=>x.getAttribute("href"));
-		var file_names = 	elements
+		var file_names = elements
 						.map(x=>x.getAttribute("title"));
+
+	break;
+
+	
+
+	case 2:
+
+		var urls_to_download = [...
+
+						document
+
+						.getElementsByClassName("image")
+
+					].map(x=>x.getAttribute("href"));
+
+		var file_names = urls_to_download
+
+						.map(x=>x.split("/").at(-1));
 }
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
 
