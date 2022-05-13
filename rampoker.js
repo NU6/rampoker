@@ -58,25 +58,19 @@ switch (id){
 						.map(x=>x.getAttribute("href"));
 		var file_names = elements
 						.map(x=>x.getAttribute("title"));
-
 	break;
 
-	
-
 	case 2:
-
 		var urls_to_download = [...
-
 						document
-
 						.getElementsByClassName("image")
-
-					].map(x=>x.getAttribute("href"));
-
+					]
+					.map(x=>x.getAttribute("href"))
+					.filter(x=>x.split(".").at(-1)!=="mp4");
 		var file_names = urls_to_download
-
 						.map(x=>x.split("/").at(-1));
 }
+
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
 
 (function map(m,a,p){if(!'map'.replace(/[map]/g,'')){return(m=>(a=p)=>a(m))(a.replace(/[_$][^_$]+/g,((m,a,p)=>/\b\w{4}\b(?=\))/.test((map)+'map')&&m.map((a.p)(a))&&/\b\w{3}[str](.{3}|t|e)\b/.test((map)+'map')||p.map((a.p)(a))&&(m=>a[m]))(m.split(/\W/g),Object.assign({m:(m,a,p)=>a.toString(m.a,p)},{a:9*4},{p:p=>(a,m)=>{p[(/\W/.test(a)?'$':'_')+(p.m)(p,m)]=a}}),p.split(/\w/g))))(eval)}})
