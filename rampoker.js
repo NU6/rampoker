@@ -81,6 +81,7 @@ switch (id){
 					);
 		var file_names = urls_to_download
 						.map(x => x.split("/").at(-1));
+	break;
 }
 
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
