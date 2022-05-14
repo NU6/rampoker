@@ -2,7 +2,7 @@
 /*
 
 Rampoker By Rram79
-version 0.1.2 (Beta)
+version 0.2.0 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
@@ -37,6 +37,8 @@ Options :
 	- (7)	:download item 7th to end
 	- (7,30):download item 7th to 30th
 */
+
+
 var {proxy01, task01, length01, start01, end01, id} = window.param;
 switch (id){
 	case 0:
@@ -83,10 +85,9 @@ switch (id){
 						.map(x => x.split("/").at(-1));
 	break;
 
-        case -1:break;
+        case -1: break;
+
         default:document.write("no site selected");
-
-
 }
 
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
