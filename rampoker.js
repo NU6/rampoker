@@ -69,6 +69,18 @@ switch (id){
 					.filter(x=>x.split(".").at(-1)!=="mp4");
 		var file_names = urls_to_download
 						.map(x=>x.split("/").at(-1));
+	break;
+
+	case 3:
+		var urls_to_download = [...
+						document.getElementsByTagName("a")
+					].map(x =>x.getAttribute("href"))
+					.filter(x => x
+						.split(".").at(-1)
+						.match(/(jpg|png|webp|gif|webm)/)
+					);
+		var file_names = urls_to_download
+						.map(x => x.split("/").at(-1));
 }
 
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
