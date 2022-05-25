@@ -2,7 +2,7 @@
 /*
 
 Rampoker By Rram79
-version 0.2.0 (Beta)
+version 0.2.1 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
@@ -83,6 +83,16 @@ switch (id){
 					);
 		var file_names = urls_to_download
 						.map(x => x.split("/").at(-1));
+	break;
+
+	case 4:
+		var cdn_id = window._n_app.options.media_server;
+		var urls_to_download = reader.gallery.images.pages
+			.map(x =>x.url().replace(/\/\/([it])\d*\./, 
+				(function(t, n) {return "//".concat(n).concat(cdn_id, ".")})
+			));
+		var file_names = urls_to_download
+						.map(x=>x.split("/").at(-1));
 	break;
 
         case -1: break;
