@@ -99,7 +99,9 @@ switch (id){
 	break;
 	
 	case 5:
-		var elements = [...$('img', $('.imgstyle'))];
+		var elements = [...
+						$('img', $('.imgstyle'))
+					];
 		var urls_to_download = elements
 						.map(x=>x.src);
 		var file_names = elements
