@@ -98,7 +98,7 @@ switch (id){
 		var tittle = Object.keys(reader.gallery.title)[0] || tittle;
 	break;
 	
-	case 1:
+	case 5:
 		var elements = [...$('img', $('.imgstyle'))];
 		var urls_to_download = elements
 						.map(x=>x.src);
