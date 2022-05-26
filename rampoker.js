@@ -2,7 +2,7 @@
 /*
 
 Rampoker By Rram79
-version 0.2.2 (Beta)
+version 0.2.4 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
@@ -96,6 +96,14 @@ switch (id){
 		var file_names = urls_to_download
 						.map(x=>x.split("/").at(-1));
 		var tittle = Object.keys(reader.gallery.title)[0] || tittle;
+	break;
+	
+	case 1:
+		var elements = [...$('img', $('.imgstyle'))];
+		var urls_to_download = elements
+						.map(x=>x.src);
+		var file_names = elements
+						.map( (x,y) => y+ " - "+ x.getAttribute("title"));
 	break;
 
         case -1: break;
