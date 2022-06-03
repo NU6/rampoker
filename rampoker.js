@@ -2,11 +2,13 @@
 /*
 
 Rampoker By Rram79
-version 0.2.4 (Beta)
+version 0.2.5 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
 javascript: (function (start01,end01){
+	function l(u='https://gitcdn.link/cdn/NU6/rampoker/main/rampoker.js', i='rampoker') {var d = document;if (!d.getElementById(i)) {var s = d.createElement('script');s.src = u;s.id = i;d.body.appendChild(s);}} 
+
 	window.param = {	
 		proxy01 : "https://api.allorigins.win/raw?url=",
 		task01 : 1,
@@ -15,16 +17,9 @@ javascript: (function (start01,end01){
 		end01 : end01,
 		id : 1
 	};
-	function l(u, i) {
-		var d = document;
-		if (!d.getElementById(i)) {
-			var s = d.createElement('script');
-			s.src = u;
-			s.id = i;
-			d.body.appendChild(s);
-		}
-	} l('https://gitcdn.link/cdn/NU6/rampoker/main/rampoker.js', 'rampoker')
-})();
+
+l()
+;})();
 ===================================================================
 
 Usage : 
@@ -36,6 +31,13 @@ Options :
 	- ()	:download all items
 	- (7)	:download item 7th to end
 	- (7,30):download item 7th to 30th
+
+===================================================================
+
+Additioal options: (recommended for long pages)
+-how many task(s) are running depends on number set on task01 property (2-5 is recommended)
+-despite that, length01 has to be changed according to stabilising the task (20-50 is recomended)
+===================================================================
 */
 
 
