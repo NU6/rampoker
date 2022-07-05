@@ -110,6 +110,17 @@ switch (id){
 						.map( (x,y) => y+ " - "+ x.getAttribute("title"));
 	break;
 
+//!!!!!  PENDING !!!!! 
+	case 6:
+		var urls_to_download = [...
+						document
+						.getElementsByClassName("msacwl-img")
+					]
+					.map(x=>x.getAttribute("data-src"))
+		var file_names = urls_to_download
+						.map(x=>x.split("/").at(-1));
+	break;
+
         case -1: break;
 
         default:document.write("no site selected");
