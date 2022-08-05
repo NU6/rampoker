@@ -2,7 +2,7 @@
 /*
 
 Rampoker By Rram79
-version 0.2.6 (Beta)
+version 0.3.0 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
@@ -42,7 +42,7 @@ Additioal options: (recommended for long pages)
 */
 
 
-var {proxy01, task01, length01, start01, end01, id} = window.param;
+var {proxy01, task01, length01, start01, end01, alertToWrite, id} = window.param;
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
 
 switch (id){
