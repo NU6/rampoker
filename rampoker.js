@@ -2,7 +2,7 @@
 /*
 
 Rampoker By Rram79
-version 0.3.0 (Beta)
+version 0.4.6 (Beta)
 
 Paste code bellow to addressbar
 ===================================================================
@@ -39,6 +39,14 @@ Additioal options: (recommended for long pages)
 -how many task(s) are running depends on number set on task01 property (2-5 is recommended)
 -despite that, length01 has to be changed according to stabilising the task (20-50 is recomended)
 ===================================================================
+Update image downloader script : https://raw.githubusercontent.com/NU6/rampoker/main/rampoker.js
+id : 0 bgdmfcb,xyz
+id : 1 cyberdrop,me
+id : 2 bunkr,is
+id : 3 sankakucomplex,com *no proxy
+id : 4 nhentai,net/g/[code]/[page]
+id : 5 jkforum,net
+id : 6 mitaku,net *no proxy
 */
 
 
