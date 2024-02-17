@@ -9,7 +9,15 @@ Paste code bellow to addressbar
 javascript: (function (start01,end01){
 	function l(u='https://gitcdn.link/cdn/NU6/rampoker/main/rampoker.js', i='rampoker') {var d = document;if (!d.getElementById(i)) {var s = d.createElement('script');s.src = u;s.id = i;d.body.appendChild(s);}} 
 
-	window.param = {	
+ 	customSite = {	
+		elementSelector : "a",
+		elementAttribute : "href",
+		regex : /\.jpg/,
+		ext : ".jpg"
+	};
+
+	window.param = {
+		customSite : customSite,
 		proxy01 : "https://api.allorigins.win/raw?url=",
 		task01 : 1,
 		length01 : 1,
@@ -50,7 +58,7 @@ id : 6 mitaku,net *no proxy
 */
 
 
-var {proxy01, task01, length01, start01, end01, alertToWrite, id} = window.param;
+var {proxy01, task01, length01, start01, end01, alertToWrite, id, customSite} = window.param;
 var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
 
 switch (id){
@@ -129,7 +137,13 @@ switch (id){
 						.map(x=>x.split("/").at(-1));
 	break;
 
-        case -1: break;
+        case -1:
+		var {elementSelector, elementAttribute, regex, ext} = customSite;
+		var elements = [... document.querySelectorAll(elementSelector)].map(x=>x.getAttribute(elementAttribute)).filter(x=>regex.test(x));
+		var urls_to_download = elements;
+		var file_names = elements
+						.map( (x,y) => title+ " - "+ y+ ext);
+	break;
 
         default:document.write("no site selected");
 }
